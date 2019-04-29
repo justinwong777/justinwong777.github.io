@@ -105,40 +105,24 @@ a:hover {
   padding:0;
 }
 
+
+@keyframes rotating {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 #gear {
+  animation-name: rotating;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
   position: absolute;
   left: 40%;
   top: 60%;
   width: 25%;
 }
 
-@-webkit-keyframes animate-rotate {
-    from {
-         -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-    }
-    to {
-         -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-    }
-}
 
-
-@-keyframes animate-rotate {
-  0% { transform: rotate(360deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.rotated-image
-{
-    -webkit-animation: animate-rotate 10s infinite;
-    animation: animate-rotate 10s infinite;
-}
-
-.rotated {
-  transform: rotate(45deg); /* Equal to rotateZ(45deg) */
-  background-color: pink;
-}
 
 #back {
   position: absolute;
